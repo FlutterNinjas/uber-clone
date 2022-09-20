@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:uber_clone/models/carousel.dart';
 import 'package:uber_clone/views/map.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -38,49 +39,50 @@ class _HomeScreenState extends State<HomeScreen> {
                             : Icon(Icons.account_circle),
                       ),
                     )),
-                Padding(
-                  padding: EdgeInsets.only(top: 12.0),
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.15,
-                    width: MediaQuery.of(context).size.width,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20.0),
-                        color: Color(0xFFE2DDF1),
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Padding(
-                              padding: EdgeInsets.only(left: 20.0, top: 20.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Ready? Then let's roll.",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Align(
-                                      alignment: Alignment.topLeft,
-                                      child: Icon(Icons.arrow_forward))
-                                ],
-                              ),
-                            ),
-                          ),
-                          Image.asset(
-                            'assets/images/start.jfif',
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width / 3.5,
-                            fit: BoxFit.cover,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
+                // Padding(
+                //   padding: EdgeInsets.only(top: 12.0),
+                //   child: Container(
+                //     height: MediaQuery.of(context).size.height * 0.15,
+                //     width: MediaQuery.of(context).size.width,
+                //     child: Container(
+                //       decoration: BoxDecoration(
+                //         borderRadius: BorderRadius.circular(20.0),
+                //         color: Color(0xFFE2DDF1),
+                //       ),
+                //       child: Row(
+                //         children: [
+                //           Expanded(
+                //             flex: 3,
+                //             child: Padding(
+                //               padding: EdgeInsets.only(left: 20.0, top: 20.0),
+                //               child: Column(
+                //                 crossAxisAlignment: CrossAxisAlignment.start,
+                //                 children: [
+                //                   Text(
+                //                     "Ready? Then let's roll.",
+                //                     style: TextStyle(
+                //                         fontSize: 20,
+                //                         fontWeight: FontWeight.bold),
+                //                   ),
+                //                   Align(
+                //                       alignment: Alignment.topLeft,
+                //                       child: Icon(Icons.arrow_forward))
+                //                 ],
+                //               ),
+                //             ),
+                //           ),
+                //           Image.asset(
+                //             'assets/images/start.jfif',
+                //             height: MediaQuery.of(context).size.height,
+                //             width: MediaQuery.of(context).size.width / 3.5,
+                //             fit: BoxFit.cover,
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                Container(height: 250, child: HomeCarousel()),
                 Padding(
                   padding: const EdgeInsets.only(top: 12.0),
                   child: Container(
