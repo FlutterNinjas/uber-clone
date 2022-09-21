@@ -45,6 +45,7 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   cloud_firestore: 1.0.3
   cached_network_image: ^3.2.0
+  carousel_pro_nullsafety: ^1.0.2
   flutter_config: ^2.0.0
 
 dev_dependencies:
