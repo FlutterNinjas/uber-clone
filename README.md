@@ -1,16 +1,29 @@
-# uber_clone
+# Uber clone App
 
-A new Flutter project.
+An Uber-like application made using Flutter.
 
-## Getting Started
+Currently this applications supports fetching the user's current location. Primary use case of this application is to help daily commuters book a ride and reach their destination, such as work place, home, cafe, or any place the user visits regulary, in the quickest way and least amount of taps possible.
 
-This project is a starting point for a Flutter application.
+## Table of contents
 
-A few resources to get you started if this is your first Flutter project:
+1. [External Services that app uses](#external-services-that-app-uses)
+2. [Features](#features)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### External Services that app uses
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Google Maps SDK for Android](https://developers.google.com/maps/documentation/android-sdk/overview) for maps on Android;
+- [Google Maps SDK for iOS](https://developers.google.com/maps/documentation/ios-sdk/overview) for maps on iOS;
+- [Firebase](https://firebase.google.com/) for authentication and database;
+
+### Features
+
+- [x] User is able to register in the system
+- [x] User is able to login into the system
+- [x] User is able to view their profile info
+- [x] User is able to view their current location
+- [x] User is able to select their dropoff point
+- [x] Geocoding and Reverse Geocoding enabled
+- [x] User is able to get directions from their pickup point to drop off location
+- [x] User is able to logout
+
+_This application is only for showcasing purposes._
