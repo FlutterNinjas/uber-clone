@@ -82,11 +82,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 //     ),
                 //   ),
                 // ),
-                Container(height: 250, child: HomeCarousel()),
+                //
+                Container(height: 200, child: HomeCarousel()),
                 Padding(
-                  padding: const EdgeInsets.only(top: 12.0),
+                  padding: const EdgeInsets.only(top: 6.0),
                   child: Container(
-                      height: MediaQuery.of(context).size.height / 5,
+                      height: MediaQuery.of(context).size.height / 6,
                       // color: Colors.grey,
                       child: Row(children: [
                         Expanded(
@@ -105,6 +106,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "assets/images/ride.png",
                                     height:
                                         MediaQuery.of(context).size.height / 9,
+                                    width:
+                                        MediaQuery.of(context).size.height / 4,
                                   ),
                                 ),
                               ),
@@ -132,11 +135,53 @@ class _HomeScreenState extends State<HomeScreen> {
                                     "assets/images/package.png",
                                     height:
                                         MediaQuery.of(context).size.height / 9,
+                                    width:
+                                        MediaQuery.of(context).size.height / 4,
                                   ),
                                 ),
                               ),
                               Text(
                                 "Package",
+                                style: TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.bold),
+                              ),
+                            ]),
+                          ),
+                        ),
+                      ])),
+                ),
+                Container(
+                  height: 2,
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 2.0),
+                  child: Container(
+                      height: MediaQuery.of(context).size.height / 6,
+                      // color: Colors.grey,
+                      child: Row(children: [
+                        Expanded(
+                          flex: 4,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(children: [
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 10.0),
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Color(0xFFECECEC),
+                                  ),
+                                  child: Image.asset(
+                                    "assets/images/rentals.png",
+                                    height:
+                                        MediaQuery.of(context).size.height / 12,
+                                    width:
+                                        MediaQuery.of(context).size.height / 4,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                "Rentals",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
@@ -156,9 +201,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                     color: Color(0xFFECECEC),
                                   ),
                                   child: Image.asset(
-                                    "assets/images/rental.png",
+                                    "assets/images/reserve.png",
                                     height:
-                                        MediaQuery.of(context).size.height / 9,
+                                        MediaQuery.of(context).size.height / 12,
+                                    width:
+                                        MediaQuery.of(context).size.height / 4,
                                   ),
                                 ),
                               ),
@@ -178,26 +225,21 @@ class _HomeScreenState extends State<HomeScreen> {
                               Padding(
                                 padding: const EdgeInsets.only(bottom: 10.0),
                                 child: Container(
-                                  height:
-                                      MediaQuery.of(context).size.height / 9,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     color: Color(0xFFECECEC),
                                   ),
-                                  child: Container(
-                                    child: Center(
-                                      child: Icon(
-                                        Icons.more_horiz,
-                                        size:
-                                            MediaQuery.of(context).size.height /
-                                                18,
-                                      ),
-                                    ),
+                                  child: Image.asset(
+                                    "assets/images/intercity.png",
+                                    height:
+                                        MediaQuery.of(context).size.height / 12,
+                                    width:
+                                        MediaQuery.of(context).size.height / 4,
                                   ),
                                 ),
                               ),
                               Text(
-                                "More",
+                                "Intercity",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.bold),
                               ),
