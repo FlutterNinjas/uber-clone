@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:uber_clone/models/carousel.dart';
+import 'package:uber_clone/views/Intercity.dart';
 import 'package:uber_clone/views/map.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -160,7 +161,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       // color: Colors.grey,
                       child: Row(children: [
                         Expanded(
-                          flex: 4,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(children: [
@@ -189,7 +189,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Expanded(
-                          flex: 4,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(children: [
@@ -217,33 +216,42 @@ class _HomeScreenState extends State<HomeScreen> {
                             ]),
                           ),
                         ),
-                        Expanded(
-                          flex: 4,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Column(children: [
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 10.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Color(0xFFECECEC),
-                                  ),
-                                  child: Image.asset(
-                                    "assets/images/intercity.png",
-                                    height:
-                                        MediaQuery.of(context).size.height / 12,
-                                    width:
-                                        MediaQuery.of(context).size.height / 4,
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => InterCity()));
+                          },
+                          child: Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 10.0),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Color(0xFFECECEC),
+                                    ),
+                                    child: Image.asset(
+                                      "assets/images/intercity.png",
+                                      height:
+                                          MediaQuery.of(context).size.height /
+                                              12,
+                                      width:
+                                          MediaQuery.of(context).size.width / 4,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                "Intercity",
-                                style: TextStyle(
-                                    fontSize: 14, fontWeight: FontWeight.bold),
-                              ),
-                            ]),
+                                Text(
+                                  "Intercity",
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ]),
+                            ),
                           ),
                         ),
                       ])),
